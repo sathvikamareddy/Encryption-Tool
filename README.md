@@ -204,13 +204,4 @@ This project helps in understanding:
 
 ---
 
-# 👩‍💻 Author
-
-**Sathvi Reddy**
-
-B.Tech – Computer Science Engineering
-Specialization: Artificial Intelligence & Machine Learning
-
----
-
 ⭐ If you find this project useful, feel free to star the repository.
