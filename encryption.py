@@ -1,30 +1,40 @@
 import random
 import string
 
-character = " " + string.punctuation + string.ascii_letters + string.digits
-character = list(character)
+# Character set
+characters = " " + string.punctuation + string.ascii_letters + string.digits
+characters = list(characters)
 
-key = character.copy()
+# Generate shuffled key
+key = characters.copy()
 random.shuffle(key)
 
-# ENCRYPT
-original_text = input("ENTER THE TEXT YOU WANT TO ENCRYPT: ")
-encrypt_text = ""
+def encrypt(text):
+    encrypted_text = ""
 
-for letter in original_text:
-    index = character.index(letter)
-    encrypt_text += key[index]
+    for letter in text:
+        index = characters.index(letter)
+        encrypted_text += key[index]
 
-print(f"Original message: {original_text}")
-print(f"Encrypted message: {encrypt_text}")
+    return encrypted_text
 
-# DECRYPT
-encrypt_text = input("ENTER THE TEXT YOU WANT TO DECRYPT: ")
-plain_text = ""
 
-for letter in encrypt_text:
-    index = key.index(letter)
-    plain_text += character[index]
+def decrypt(text):
+    decrypted_text = ""
 
-print(f"Encrypted message: {encrypt_text}")
-print(f"Original message: {plain_text}")
+    for letter in text:
+        index = key.index(letter)
+        decrypted_text += characters[index]
+
+    return decrypted_text
+
+
+print("------ TEXT ENCRYPTION TOOL ------")
+
+original_text = input("Enter text to encrypt: ")
+
+encrypted = encrypt(original_text)
+print(f"\nEncrypted Message: {encrypted}")
+
+decrypted = decrypt(encrypted)
+print(f"Decrypted Message: {decrypted}")
