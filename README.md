@@ -1,6 +1,6 @@
 <div align="center">
   
-# 🔐 Python Text Encryption & Decryption Tool
+## 🔐 Python Text Encryption & Decryption Tool
 
 </div>
 
